@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e9efe6 0%, #f4f6f8 220px, #ffffff 100%);
+  color: #333;
+}
+
+.site-header { background: rgba(214, 226, 208, 0.45); }
+.logo { text-decoration: none; color: #1c2230; display: inline-flex; flex-direction: column; line-height: 1; }
+.logo-main { font-family: "Playfair Display", Georgia, "Times New Roman", serif; font-size: 3rem; letter-spacing: 2px; }
+.logo-sub { font-size: .55rem; letter-spacing: 6px; text-align: right; font-weight: 700; }
+
+.btn { transition: all .25s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, .15); }
+
+.search-bar .form-control:focus,
+.search-bar .form-select:focus { border-color: #86b7fe; box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25); }
+
+.product-col { animation: fadeUp .5s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+.product-card {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  height: 100%;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: #6ea8fe;
+  box-shadow: 0 10px 24px rgba(13, 110, 253, .18);
+}
+.img-wrap { overflow: hidden; height: 190px; background: #eee; }
+.img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.product-card:hover .img-wrap img { transform: scale(1.08); }
+
+.product-card .card-body { padding: .9rem 1rem; }
+.product-card .card-title { font-size: 1.05rem; margin-bottom: .4rem; }
+.product-card .meta { color: #6c757d; font-size: .9rem; margin-bottom: .4rem; }
+
+.heart-btn { background: none; border: 0; font-size: 1.25rem; line-height: 1; color: #2b2b2b; padding: 0 .5rem 0 0; transition: transform .2s ease, color .2s ease; }
+.heart-btn:hover { transform: scale(1.25); }
+.heart-btn.active { color: #dc3545; animation: pop .35s ease; }
+@keyframes pop { 50% { transform: scale(1.5); } }
+
+main.container { max-width: 900px; }
+.logo-main { font-size: 2.4rem; }
+
+.auth-wrap { max-width: 900px; }
+.auth-card { background: rgba(255,255,255,.65); border: 1px solid #dee2e6; border-radius: 8px; padding: 28px; box-shadow: 0 4px 14px rgba(0,0,0,.05); animation: fadeUp .5s ease both; }
+.auth-card .form-control:focus { border-color: #86b7fe; box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); }
